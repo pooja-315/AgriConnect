@@ -10,7 +10,7 @@ import profile_img from '../../assets/farmer - Copy.png'
 import { CartContext } from "../../Context/CartContext"; 
 
 
-const Navbar = () => {
+const Navbar = ({toggleMenu}) => {
 
     const { cart } = useContext(CartContext);
     const navigate = useNavigate();
@@ -18,11 +18,11 @@ const Navbar = () => {
   return (
     <div className='navbar'>
 
-        <div className="navbar-left" onClick={() => navigate("/")}>
-            <div className="nav-background">
+        <div className="navbar-left">
+            <div className="nav-background" onClick={toggleMenu}>
                 <img title='menu' className='menu-icon' src={menu_img} alt="" />
             </div>
-            <div className="logo">
+            <div className="logo" onClick={() => navigate("/")}>
                 <img src={logo_img} alt="" />
                 <h1>FarmSmart</h1>
             </div>

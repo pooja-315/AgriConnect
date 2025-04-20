@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     font-family: 'roboto', sans-serif;
+    background-color: #fff;
 }
 
 .navbar-left {
