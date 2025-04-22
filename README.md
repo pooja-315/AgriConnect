@@ -37,7 +37,7 @@ Follow these steps to set up the project locally:
 1️⃣ **Clone the repository**  
    ```sh
    git clone https://github.com/M-STEPHEN-RAJ/Farm-Smart.git
-   cd youtube-clone
+   cd Farm-Smart/Frontend
    ```
 
 2️⃣ **Install dependencies**
