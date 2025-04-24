@@ -13,7 +13,7 @@ const BuySeeds = () => {
     // Fetch seed data from the backend
     const fetchSeeds = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/seeds');
+        const response = await axios.get('https://buyseeds.onrender.com/api/seeds');
         setSeeds(response.data);  // Set the fetched data to state
         setLoading(false);  // Set loading to false after fetching
       } catch (err) {
