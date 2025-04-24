@@ -77,3 +77,10 @@
 .remove-btn:hover {
     background-color: #c9302c !important; /* Darker red */
 }
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
