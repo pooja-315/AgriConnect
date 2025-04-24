@@ -35,7 +35,7 @@ const BuySeeds = () => {
   return (
     <div className='buyseeds'>
       {seeds.map((seed) => (  // Use seeds instead of data
-        <div key={seed._id.toString()} className="card">  {/* Use _id as the key */}
+        <div key={seed._id.toString()} className="card">
           <img src={seed.pic} alt={seed.name} />  {/* Display the image fetched from the backend */}
           <div className="seed-desc">
             <h3>{seed.name}</h3>
