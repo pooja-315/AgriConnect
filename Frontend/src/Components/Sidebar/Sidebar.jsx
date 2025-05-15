@@ -89,7 +89,7 @@ const Sidebar = () => {
 
             <hr className="sidebar-hr-2" />
 
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2025&nbsp;&nbsp; SmartFarm</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2025&nbsp;&nbsp; FarmSmart</p>
         </div>
     </div>
   );

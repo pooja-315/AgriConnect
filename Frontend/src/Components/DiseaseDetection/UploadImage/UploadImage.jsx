@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './UploadImage.css';
+import Loading from '../../Loading/Loading';
 
 const UploadImage = ({ onResult }) => {
   const [image, setImage] = useState(null);
@@ -69,6 +70,12 @@ const UploadImage = ({ onResult }) => {
       setLoading(false);
     }
   };
+
+  if (loading) {
+    return <div className='buyseeds loading'>
+      <Loading />
+    </div>;
+  } 
 
   return (
     <div className="dd-container" onDrop={handleDrop} onDragOver={handleDragOver}>
