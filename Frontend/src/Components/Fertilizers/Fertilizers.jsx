@@ -12,7 +12,7 @@ const FertilizerRecommendations = () => {
   useEffect(() => {
     const fetchFertilizers = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/fertilizers');
+        const response = await axios.get('https://fertilizers.onrender.com/api/fertilizers');
 
         setFertilizers(response.data);
         setLoading(false);
