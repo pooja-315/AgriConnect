@@ -7,8 +7,8 @@ import FarmAIPage from './Pages/FarmAIPage/FarmAIPage'
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import DiseaseDetectionPage from './Pages/DiseaseDetectionPage/DiseaseDetectionPage'
 import CartPage from './Pages/CartPage/CartPage'
-import Notification from './Components/Notification/Notification'
 import NotificationPage from './Pages/NotificationPage/NotificationPage'
+import FertilizersPage from './Pages/FertilizersPage/FertilizersPage'
 
 const App = () => {
   return (
@@ -17,6 +17,7 @@ const App = () => {
         <Route path='/' element={<HomePage />} />
         <Route path='/buy-seeds' element={<BuySeedPage />} />
         <Route path='/crop-recommender' element={<CropRecommenderPage />} />
+        <Route path='/fertilizers' element={<FertilizersPage />} />
         <Route path='/smart-farm-ai' element={<FarmAIPage />} />
         <Route path='/disease-detection' element={<DiseaseDetectionPage />}/>
         <Route path='/notification' element={<NotificationPage />} />

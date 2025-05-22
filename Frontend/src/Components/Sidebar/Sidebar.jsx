@@ -44,10 +44,12 @@ const Sidebar = () => {
               </div>
             </Link>
 
-            <div className="side-background">
+            <Link className='link' to="/fertilizers">
+              <div className={location.pathname === "/fertilizers" ? "side-background side-active" : "side-background"}>
                 <img src={fertilizer_img} alt="" />
                 <h3>Fertilizers</h3>
-            </div>
+              </div>
+            </Link>            
 
             <Link className='link' to="/disease-detection">
               <div className={location.pathname === "/disease-detection" ? "side-background side-active" : "side-background"}>
