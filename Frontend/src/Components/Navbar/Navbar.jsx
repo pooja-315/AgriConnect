@@ -7,13 +7,18 @@ import info_img from '../../assets/info_img.svg'
 import cart_img from '../../assets/cart_img.svg'
 import notify_img from '../../assets/notification_img.svg'
 import profile_img from '../../assets/farmer - Copy.png'
-import { CartContext } from "../../Context/CartContext"; 
-
+import { CartContext } from "../../Context/CartContext"
+import { useAuth } from '../../contexts/AuthContext'
 
 const Navbar = ({toggleMenu}) => {
-
     const { cart } = useContext(CartContext);
+    const { user, logout } = useAuth();
     const navigate = useNavigate();
+
+    const handleLogout = () => {
+        logout();
+        navigate('/');
+    };
 
   return (
     <div className='navbar'>
@@ -24,12 +29,12 @@ const Navbar = ({toggleMenu}) => {
             </div>
             <div className="logo" onClick={() => navigate("/")}>
                 <img src={logo_img} alt="" />
-                <h1>FarmSmart</h1>
+                <h1>Agriconnect</h1>
             </div>
         </div>
 
         <div className="navbar-right">
-            <a href="/Journal Paper.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Journal Paperr.pdf" target="_blank" rel="noopener noreferrer">
                 <div className="nav-background">
                     <img title="info" className="notify-icon" src={info_img} alt="Info" />
                 </div>
@@ -50,8 +55,14 @@ const Navbar = ({toggleMenu}) => {
                 </div>
             </Link>     
 
-            <div className="profile-background">
-                <img title='profile' src={profile_img} alt="" />
+            <div className="user-info">
+                <span className="username">Welcome, {user?.username}</span>
+                <div className="profile-background">
+                    <img title='profile' src={profile_img} alt="" />
+                </div>
+                <button className="logout-btn" onClick={handleLogout} title="Logout">
+                    Logout
+                </button>
             </div>
         </div>
 

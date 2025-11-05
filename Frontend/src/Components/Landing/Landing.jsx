@@ -13,19 +13,19 @@ const Landing = () => {
       <div className="landing-container">
         
         <div className="landing-left">
-          <div className="farmSmart-logo">
+          <div className="agriconnect-logo">
             <img src={logo} alt="" />
-            <p>FarmSmart</p>
+            <p>Agriconnect</p>
           </div>
           <div className="landing-desc">
-            <p>Revolutionizing Farming with Smart Solutions.</p>
-            <button onClick={() => window.location.href = '/smart-farm-ai'}>Try Farm AI &nbsp; &#x2197;</button>
+            <p>From Soil to Success – Smarter Every Step with Us.</p>
+            <button onClick={() => window.location.href = '/smart-farm-ai'}>Try Agriconnect AI &nbsp; &#x2197;</button>
           </div>
         </div>
 
         <div className="landing-right">
           <div className="farmer-img">
-            <img src={farmer} alt="" />
+            <img src={farmer} alt="Farmer" className="farmer-image" />
             <div className="farmer-bg"></div>
           </div>
         </div>

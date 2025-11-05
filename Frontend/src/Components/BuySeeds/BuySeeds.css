@@ -5,9 +5,13 @@
 }
 
 :root {
+    --primary-green: #2d5016;
+    --secondary-green: #4a7c23;
+    --accent-green: #6ba83a;
+    --light-green: #a4d65e;
     --card-bg-clr-- : #fff;
-    --seed-h3-clr-- : #666;
-    --btn-hvr-clr-- : #49af2f;
+    --seed-h3-clr-- : var(--primary-green);
+    --btn-hvr-clr-- : var(--secondary-green);
 }
 
 .buyseeds {
@@ -55,7 +59,7 @@
 }
 
 .seed-desc button {
-    background-color: #289c28;
+    background-color: var(--accent-green);
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -63,10 +67,12 @@
     cursor: pointer;
     width: 90px;
     height: 28px;
+    transition: all 0.3s ease;
 }
 
 .seed-desc button:hover {
     background-color: var(--btn-hvr-clr--);
+    transform: translateY(-1px);
 }
 
 .remove-btn {

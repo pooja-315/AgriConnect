@@ -51,7 +51,7 @@ const CropRecommender = ({ onResult }) => {
         <Loading />
       ) : (
         <>
-          <h2>Crop Recommendation System</h2>
+          <h2>Agriconnect Crop Recommendation System</h2>
           <form onSubmit={handleSubmit}>
             <label>Temperature (°C):</label>
             <input type="number" name="temperature" value={formData.temperature} onChange={handleChange} required />

@@ -9,21 +9,29 @@ import DiseaseDetectionPage from './Pages/DiseaseDetectionPage/DiseaseDetectionP
 import CartPage from './Pages/CartPage/CartPage'
 import NotificationPage from './Pages/NotificationPage/NotificationPage'
 import FertilizersPage from './Pages/FertilizersPage/FertilizersPage'
+import { AuthProvider } from './contexts/AuthContext'
+import ProtectedRoute from './components/ProtectedRoute'
+import DashboardPage from './Pages/DashboardPage/DashboardPage'
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/buy-seeds' element={<BuySeedPage />} />
-        <Route path='/crop-recommender' element={<CropRecommenderPage />} />
-        <Route path='/fertilizers' element={<FertilizersPage />} />
-        <Route path='/smart-farm-ai' element={<FarmAIPage />} />
-        <Route path='/disease-detection' element={<DiseaseDetectionPage />}/>
-        <Route path='/notification' element={<NotificationPage />} />
-        <Route path='/cart' element={<CartPage />}/>
-      </Routes>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <ProtectedRoute>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/dashboard' element={<DashboardPage />} />
+            <Route path='/buy-seeds' element={<BuySeedPage />} />
+            <Route path='/crop-recommender' element={<CropRecommenderPage />} />
+            <Route path='/fertilizers' element={<FertilizersPage />} />
+            <Route path='/smart-farm-ai' element={<FarmAIPage />} />
+            <Route path='/disease-detection' element={<DiseaseDetectionPage />}/>
+            <Route path='/notification' element={<NotificationPage />} />
+            <Route path='/cart' element={<CartPage />}/>
+          </Routes>
+        </ProtectedRoute>
+      </Router>
+    </AuthProvider>
   )
 }
 

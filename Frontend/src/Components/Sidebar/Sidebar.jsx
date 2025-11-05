@@ -11,13 +11,15 @@ import settings from '../../assets/settings_img.svg';
 import help_img from '../../assets/help_img.svg';
 import feedback from '../../assets/feedback_img.svg';
 import logout from '../../assets/logout_img.svg';
+import { useAuth } from '../../contexts/AuthContext';
 
 const Sidebar = () => {
 
-  const location = useLocation(); // Get current URL
+  const location = useLocation();
+  const { logout: handleLogout } = useAuth();
 
   const handleFeedbackClick = () => {
-    window.location.href = "mailto:stephenrajm.ug22.ad@francisxavier.ac.in.com?subject=FarmSmart Feedback&body=Hello FarmSmart Team!, ";
+    window.location.href = "mailto:stephenrajm.ug22.ad@francisxavier.ac.in.com?subject=Agriconnect Feedback&body=Hello Agriconnect Team!, ";
   };
 
   return (
@@ -27,6 +29,13 @@ const Sidebar = () => {
               <div className={location.pathname === "/" ? "side-background side-active" : "side-background"}>
                 <img src={home_img} alt="" />
                 <h3>Home</h3>
+              </div>
+            </Link>
+
+            <Link className='link' to="/dashboard">
+              <div className={location.pathname === "/dashboard" ? "side-background side-active" : "side-background"}>
+                <img src={settings} alt="" />
+                <h3>Dashboard</h3>
               </div>
             </Link>
 
@@ -61,7 +70,7 @@ const Sidebar = () => {
             <Link className='link' to="/smart-farm-ai">
               <div className={location.pathname === "/smart-farm-ai" ? "side-background side-active" : "side-background"}>
                 <img src={farmAi} alt="" />
-                <h3>Farmer&apos;s AI</h3>
+                <h3>Agriconnect AI</h3>
               </div>
             </Link>
 
@@ -84,17 +93,18 @@ const Sidebar = () => {
                 <h3>Send Feedback</h3>
             </div>
 
-            <div className="side-background">
+            <div onClick={handleLogout} className="side-background logout-sidebar">
                 <img src={logout} alt="" />
                 <h3>Log out</h3>
             </div>
 
             <hr className="sidebar-hr-2" />
 
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2025&nbsp;&nbsp; FarmSmart</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2025&nbsp;&nbsp; Agriconnect</p>
         </div>
     </div>
   );
 };
 
+export default Sidebar;
 export default Sidebar;

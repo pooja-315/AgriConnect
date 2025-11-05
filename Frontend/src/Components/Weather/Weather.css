@@ -6,7 +6,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .weather-left,
@@ -17,15 +18,66 @@
 .weather-icon {
     display: flex;
     align-items: center;
-    color: #666;
-    font-size: 18px;
+    color: var(--primary-green);
+    font-size: 16px;
+    font-weight: 500;
+    position: relative;
 }
 
 .weather-icon img {
     width: 26px;
+    margin-right: 6px;
+}
+
+.weather-icon p {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
 }
 
 .condition,
 .location {
     gap: 8px;
+}
+
+.location {
+    position: relative;
+}
+
+.retry-location {
+    background: none;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 2px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.retry-location:hover {
+    background-color: var(--bg-light);
+}
+
+.temperature .weather-icon,
+.humidity .weather-icon {
+    font-weight: 600;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .weather-container {
+        gap: 20px;
+        justify-content: center;
+    }
+    
+    .weather-icon {
+        font-size: 14px;
+    }
+    
+    .weather-icon p {
+        max-width: 100px;
+    }
 }
