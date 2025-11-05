@@ -65,7 +65,7 @@ Follow these steps to set up the project locally:
 
 1️⃣ **Clone the repository**  
    ```sh
-   git clone https://github.com/M-STEPHEN-RAJ/Farm-Smart.git
+   git clone https://github.com/pooja-315/AgriConnect.git
    cd AgriConnect/Frontend
    ```
 
